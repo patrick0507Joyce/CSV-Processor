@@ -39,6 +39,8 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
   },
   icon: {
+    width: 60,
+    height: 60,
   },
   form: {
     width: "30%",
@@ -55,7 +57,7 @@ export default function Login() {
 
   return(
     <div className={classes.paper}>
-        <DiReact className={classes.icon} component="h1"/>
+        <DiReact className={classes.icon}/>
         <Typography component="h1" variant="h5">
           Sign in
         </Typography>

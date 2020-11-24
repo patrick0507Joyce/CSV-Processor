@@ -1,5 +1,5 @@
 import { React, useState, useRef, useEffect } from "react";
-import { Button, LinearProgress } from "@material-ui/core";
+import { Button, LinearProgress, Input } from "@material-ui/core";
 import Dropzone from "react-dropzone";
 import Snackbar from "@material-ui/core/Snackbar";
 import MuiAlert from "@material-ui/lab/Alert";
@@ -99,12 +99,11 @@ const FileUpload = ({ setUploadStatus }) => {
   };
   return (
     <div className={styles.container}>
-      <input
+      <Input
         type="file"
         accept="text/csv"
-        ref={inputRef}
+        inputRef={inputRef}
         onChange={() => setFiles(inputRef.current.files[0])}
-        ref={inputRef}
       />
       <Button variant="contained" component="label" onClick={handleUploadEvent}>
         Upload CSV File
