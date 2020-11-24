@@ -24,8 +24,3 @@ const App = () => {
 };
 
 export default App;
-
-/*
-                <FileUpload setUploadStatus={setUploadStatus}/>
-                <Output isUploaded={uploadStatus}/>
-*/

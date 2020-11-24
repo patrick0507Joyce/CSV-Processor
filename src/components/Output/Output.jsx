@@ -1,6 +1,6 @@
-import { React, useState, useEffect } from "react";
+import { React, useState } from "react";
 import * as d3 from "d3";
-import { Button, LinearProgress } from "@material-ui/core";
+import { Button } from "@material-ui/core";
 
 import styles from "./Output.module.css";
 
@@ -9,7 +9,6 @@ const url = "http://127.0.0.1:8000";
 const Output = ({ isUploaded }) => {
   const [showResults, setShowResults] = useState(false);
   const [csvData, setCsvData] = useState([]);
-
 
   const handleResultClick = () => {
     if (!showResults) {
@@ -23,14 +22,10 @@ const Output = ({ isUploaded }) => {
   const Results = () => (
     <div className={styles.content}>
       <div>
-        <img src={`${url}/picture`} alt={"123"}/>
+        <img src={`${url}/picture`} alt={"123"} />
       </div>
       <div>
-        <a
-          href={`${url}/csv`}
-          download={"output.csv"}
-          align="center"
-        >
+        <a href={`${url}/csv`} download={"output.csv"} align="center">
           <Button>
             <i className="fas fa-download" />
             Download CSV

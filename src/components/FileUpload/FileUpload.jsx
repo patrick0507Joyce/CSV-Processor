@@ -1,6 +1,5 @@
 import { React, useState, useRef, useEffect } from "react";
-import { Button, LinearProgress, Input } from "@material-ui/core";
-import Dropzone from "react-dropzone";
+import { Button, Input } from "@material-ui/core";
 import Snackbar from "@material-ui/core/Snackbar";
 import MuiAlert from "@material-ui/lab/Alert";
 import axios from "axios";
@@ -94,9 +93,6 @@ const FileUpload = ({ setUploadStatus }) => {
     setFailedProcessStatus(false);
   };
 
-  const handleFileChange2 = () => {
-    console.log("1111111");
-  };
   return (
     <div className={styles.container}>
       <Input
