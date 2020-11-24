@@ -4,7 +4,7 @@ import { Button } from "@material-ui/core";
 
 import styles from "./Output.module.css";
 
-const url = "http://127.0.0.1:8000";
+const url = "https://aisquare-csv-processor.herokuapp.com";
 
 const Output = ({ isUploaded }) => {
   const [showResults, setShowResults] = useState(false);
