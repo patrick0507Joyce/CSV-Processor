@@ -100,10 +100,12 @@ const FileUpload = ({ setUploadStatus }) => {
   return (
     <div className={styles.container}>
       <Input
+        color="primary"
         type="file"
-        accept="text/csv"
+        inputProps={{ accept: "text/csv" }}
         inputRef={inputRef}
         onChange={() => setFiles(inputRef.current.files[0])}
+        className={styles.inputBox}
       />
       <Button variant="contained" component="label" onClick={handleUploadEvent}>
         Upload CSV File
